@@ -6,3 +6,4 @@
 
 - Op github worden onze veranderingen opgeslagen
 - We kunnen onze veranderingen in de tijd vergelijkingen aanpassen en zo.
+- Dat regel ik wel, asni merzitje, bre
