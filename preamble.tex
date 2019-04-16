@@ -1,16 +1,25 @@
 \usepackage{lmodern}
 \usepackage{microtype}
 \usepackage[dutch]{babel}
+\usepackage{csquotes}
 %%% Font & taal
 \usepackage{booktabs,array,multirow,tabularx} %% Tabellen libraries
 \usepackage{siunitx}
-\usepackage{mhchem}
+\usepackage[version=4]{mhchem}
 %%% Figuur programmeren
 \usepackage{tikz}
 \usetikzlibrary{positioning}
+\usepackage{graphicx}
 %%% Marges bepaling
-\usepackage{natbib}
+\usepackage{biblatex}
 \addbibresource{bib.bib}
 %%% Bibliografie
+\usepackage{hyperref,cleveref}
+\hypersetup{%
+    colorlinks=true,
+    citecolor=blue
+}
+%%% Hyperlinks & easy referencing
+\usepackage{blindtext}
 \KOMAoptions{DIV=calc}
 
