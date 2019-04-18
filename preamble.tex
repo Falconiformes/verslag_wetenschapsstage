@@ -52,12 +52,24 @@
 \usepackage{biblatex}
 \addbibresource{Bronnen/bib.bib}
 %%% Bibliografie
-\usepackage{hyperref,cleveref}
+\usepackage[pdfusetitle]{hyperref}
 \hypersetup{%
     colorlinks=true,
-    citecolor=blue
+    citecolor=blue,
+    pdfauthor={Edon Namani; Martijn Schuiling; Gijs Stuart; Casper Jansen; Martein Leen},
+    pdftitle={Effect van borstvoeding op ontwikkelingskans van astma},
+    pdfsubject={Immunologie; Allergie},
+    pdfkeywords={Immunologie; Allergie; Borstvoeding; Astma; Odds ratio}
 }
+\usepackage{cleveref}
 %%% Hyperlinks & easy referencing
-\usepackage{blindtext}
+\usepackage[acronym,smallcaps]{glossaries}
+\usepackage{scrlayer-scrpage}
+\ohead{Namani et al.}
+\ihead{Borstvoeding \& astma}
+\ifoot{\copyright{} 2019 \LaTeXe{} foundations}
+\usepackage{threeparttable}
 \KOMAoptions{DIV=calc}
-
+%%%% acronyms
+\newacronym{lovk}{lovk}{lange onverzadigde vetzuurketen}
+\makeglossaries

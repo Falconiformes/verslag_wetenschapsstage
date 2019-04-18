@@ -13,12 +13,8 @@
 
 \section{Introductie}
 In de afgelopen decennia is de incidentie van astma en andere type I hypersensitiviteit morbi ferm toegenomen \cite{Platts_Mills_2015}. Deze toegenomen incidentie veroorzaakt een verhoogde zorglast voor de maatschappij. Astma is een kinderlijke chronische respiratoire morbus. Meerdere factoren dragen bij aan de ontwikkeling van astma. De factoren zijn de genetische predispositie, de wijze van bevalling en het dieet \cite{abbas2017cellular,Houghteling_2015}.
+Parallel met de stijging van de incidentie is het dieet van de zuigeling veranderd. Borstvoeding was in het verleden gebruikelijker \cite{world1981contemporary,Victora_2016,Rollins_2016}. Het dieet is verschoven naar flesvoeding of vervroegd vaste voeding. Daarom hebben wij onderzocht wat het effect van borstvoeding is bij zuigelingen op de ontwikkelingskans van astma voor de zesde levensjaar in vergelijking tot flesvoeding.
 
-Parallel met de stijging van de incidentie is het dieet van de zuigeling veranderd. Borstvoeding was in het verleden gebruikelijker \cite{world1981contemporary,Victora_2016,Rollins_2016}. Het dieet is verschoven naar flesvoeding of vervroegd vaste voeding. In tegenstelling tot de twee laatstgenoemde diëten verschaft borstvoeding een positief modulerend werking op het immuunsysteem van de zuigeling.
-
-De ontwikkeling van astma is te verwijten aan een verlaagde verhouding van T\textsubscript{h}1/T\textsubscript{h}2 cellen en een gebrek aan Tregs.
-
-\input{atopie_ontwikkeling_fig}
 
 \section{Methode}
     \subsection{Zoek \& selectie}
@@ -27,8 +23,38 @@ De ontwikkeling van astma is te verwijten aan een verlaagde verhouding van T\tex
 
     %\subsection{Kwaliteitsbeoordeling}
 \section{resultaten}
+\begin{table}
+   \centering
+   \begin{threeparttable}
+   \resizebox{\textwidth}{!}{% 
+    \begin{tabular}{ll*5cl}
+        \toprule
+        Artikel     & Nationaliteit & \multicolumn{2}{c}{$n_{tot}$} & OR         & Follow-up        & Borstvoeding & Onderzoeksvorm \\
+        \cmidrule(lr){3-4}
+                    &               & $n_{borst}$                   & $n_{fles}$ & 95\% BI-interval & (jaar)       & (maand)         &  \\
+        \midrule
+        Oddy1999    & Australië     &                               &            & 1,25 (1,02-1,52)                  & 6              & 4                 & Cohort studie  \\
+        Dekker2016  & Nederland     &                               &            & 2,19 (1,29-3,71)                  & 6             & 2                & Cohort studie  \\
+        Dell2001    & Canada        &                               &            & 2,39 (0,95-6,03)                  & *\tnote{1}             & 9                & Cohort studie  \\
+        Chandra1996 & Canada        &                               &            & 2,37 (1,12-5,00)                  & 5             & 6                & RCT  \\
+        \bottomrule
+    \end{tabular}
+}
+\begin{tablenotes}
+\item[1]Gwn weglaten;
+\end{tablenotes}
+\end{threeparttable}
+\label{tab:overzicht_artcls}
+\end{table}
 
 \section{Discussie \& conclusie}
 
+%%% Vervolgonderzoek - mechanisme van borstvoeding
+De ontwikkeling van astma is te verwijten aan een verlaagde verhouding van T\textsubscript{h}1/T\textsubscript{h}2 cellen en een gebrek aan Tregs (zie \cref{fig:atopie_ontwikkeling}). CD4\textsuperscript{+} T~cellen kunnen opgedeeld worden in deelverzamelingen op basis van de cytokines die ze uitscheiden. T\textsubscript{h}1~cellen scheiden IFN-$\gamma$ uit, T\textsubscript{h}2~cellen IL-5 en Tregs IL-10. Door de uitscheiding van verschillende cytokines heeft elke deelverzameling een eigen unieke effector functie. T\textsubscript{h}1~cellen zorgen voor de doding van intracellulaire pathogenen, T\textsubscript{h}2~cellen voor doding van parasieten en Tregs onderdrukking van het immuunsysteem. Het doden van parasieten gebeurt door de activatie van eosinofielen, mest cellen en door immunoglobuline klasse switching naar IgE. Hetzelfde fysiologische mechanisme ligt ook ten grondslag bij de pathologie van astma.
+
+Moederlijk melk bevat \glspl{lovk} \cite{das2002essential}. \Glspl{lovk} verbeteren de diversiteit van het darmflora. De diversiteit zorgt voor een verhoogde productie van TGF-$\beta$ \cite{das2002essential,Das_2004}. Deze cytokine is een mitogene factor voor Tregs. Tregs bevorderen de differentiatie van T\textsubscript{h}1~cellen en remt van T\textsubscript{h}2-cellen \cite{penttila2010milk}. Verder remmen de Tregs de productie van ontsteking veroorzakende cytokinen. 
+
+\input{atopie_ontwikkeling_fig}
+\printglossaries
 \printbibliography 
 \end{document}

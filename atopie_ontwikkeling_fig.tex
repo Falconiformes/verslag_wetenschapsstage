@@ -1,4 +1,5 @@
 \begin{figure}
+    \centering
     \begin{tikzpicture}[ultra thick,auto,blok/.style={draw,thick,fill=blue!25}]
         \foreach \x in {0,120,240} {
         \Receptor{\x}
@@ -25,20 +26,20 @@
     \end{scope}
     \node[yshift=10em,blok] (tgfb) at (r) {TGF-$\beta$};
     \node[above of=tgfb,blok] (microbioom) {Divers microbioom};
-    \node[above of=microbioom,blok] (lkvoz) {LKOVZ};
-    \node[blok] (atopie) at (9em,-10em) {Atopie};
+    \node[above of=microbioom,blok] (lkvoz) {\glspl{lovk}};
+    \node[blok,fill=red!25] (atopie) at (9em,-10em) {Atopie};
                     \begin{scope}[thick]
                         \draw[<->] (a) -- (z) node[midway] {differentiatie};
-                        \draw[-|] (r.east) to[out=0,in=90] ($(z)+(0,2)$);
-                        \draw[->] (r.west) to[out=180,in=90] ($(a)+(0,2)$);
-                        \draw[-|] (a) to[bend right] (atopie);
-                        \draw[->] (z) to[bend left] (atopie);
+                        \draw[-|] (r.east) to[out=0,in=90] node{$\downarrow$ differentiatie} ($(z)+(0,2)$);
+                        \draw[->] (r.west) to[out=180,in=90] node[anchor=south east]{$\uparrow$ differentiatie} ($(a)+(0,2)$);
+                        \draw[-|] (a) to[bend right] node[anchor=north east] {vermindert}(atopie);
+                        \draw[->] (z) to[bend left] node[auto]{verhoogt} (atopie);
                         \path[->] (lkvoz) edge (microbioom)
                                   (microbioom) edge (tgfb)
                                   (tgfb) edge ($(r)+(0,2)$)
                                   ;
                 \end{scope}
     \end{tikzpicture}
-    \captionbelow{}
+    \captionbelow{Hypothetische werkingsmechanisme van borstvoeding op vermindering van atopie. \Glspl{lovk} verhoogt de diversiteit van het microbioom. Deze verhoging leidt tot een productieverhoging van de cytokine TGF-$\beta$. TGF-$\beta$ bevordert de groei van Tregs. Tregs hebben een immuunonderdrukkende functie en zorgen voor een hogere $\frac{\text{T\textsubscript{h}1}}{\text{T\textsubscript{h}2}}$. Tezamen veroorzaken zij een verlaagde predispositie op ontwikkeling van astma.}
     \label{fig:atopie_ontwikkeling}
 \end{figure}
