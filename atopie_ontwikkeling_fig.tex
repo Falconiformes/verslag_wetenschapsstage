@@ -1,0 +1,44 @@
+\begin{figure}
+    \begin{tikzpicture}[ultra thick,auto,blok/.style={draw,thick,fill=blue!25}]
+        \foreach \x in {0,120,240} {
+        \Receptor{\x}
+    }
+        \cellmembrane{blue}{a}
+        \nucleus{blue}{b}
+        \node[left] at (a.north west) {T\textsubscript{h}1 cel};
+    \begin{scope}[xshift=18em]
+    \foreach \x in {0,120,240} {
+    \Receptor{\x}
+}
+    \cellmembrane{red}{z}
+    \nucleus{red}{b}
+    \node[right] at (z.north east) {T\textsubscript{h}2 cel};
+\end{scope}
+
+    \begin{scope}[xshift=9em,yshift=9em]
+    \foreach \x in {0,120,240} {
+    \Receptor{\x}
+}
+    \cellmembrane{green}{r}
+    \nucleus{green}{l}
+    \node[right] at (r.north east) {Treg cel};
+    \end{scope}
+    \node[yshift=10em,blok] (tgfb) at (r) {TGF-$\beta$};
+    \node[above of=tgfb,blok] (microbioom) {Divers microbioom};
+    \node[above of=microbioom,blok] (lkvoz) {LKOVZ};
+    \node[blok] (atopie) at (9em,-10em) {Atopie};
+                    \begin{scope}[thick]
+                        \draw[<->] (a) -- (z) node[midway] {differentiatie};
+                        \draw[-|] (r.east) to[out=0,in=90] ($(z)+(0,2)$);
+                        \draw[->] (r.west) to[out=180,in=90] ($(a)+(0,2)$);
+                        \draw[-|] (a) to[bend right] (atopie);
+                        \draw[->] (z) to[bend left] (atopie);
+                        \path[->] (lkvoz) edge (microbioom)
+                                  (microbioom) edge (tgfb)
+                                  (tgfb) edge ($(r)+(0,2)$)
+                                  ;
+                \end{scope}
+    \end{tikzpicture}
+    \captionbelow{}
+    \label{fig:atopie_ontwikkeling}
+\end{figure}

@@ -8,7 +8,45 @@
 \usepackage[version=4]{mhchem}
 %%% Figuur programmeren
 \usepackage{tikz}
-\usetikzlibrary{positioning}
+\usetikzlibrary{positioning,calc,intersections}
+\newcommand{\Receptor}[1]{%
+\begin{scope}[rotate around={#1:(0,0)}]
+    \draw[%
+    ultra thick,
+    smooth,
+    line cap=round
+    ] (-.50em,1em) -- ++(0,2.5em) 
+    to[bend left] ++(-.5em,1.25em) to[bend left] ++ (-1.0em,1.25em);
+%
+    \draw[%
+    xscale=-1,
+    ultra thick,
+    smooth,
+    line cap=round
+    ] (-.50em,1em) -- ++(0,2.5em) 
+    to[bend left] ++(-.5em,1.25em) to[bend left] ++ (-1.0em,1.25em);
+\end{scope}
+}
+\newcommand{\cellmembrane}[2]{%
+        \node[fill=#1!45,
+        minimum size=5em,
+        inner sep=0,
+        draw,
+        circle,ultra thick
+        ] (#2) at (0,0) {};
+}
+\newcommand{\nucleus}[2]{%
+        \node[%
+        shading=ball,
+        ball color=#1!50,
+        minimum size=2.5em,
+        inner sep=0,
+        draw,
+        circle,
+        ultra thick
+        ] (#2) at (-0.20,0.20) {};
+}
+\tikzset{>=latex}
 \usepackage{graphicx}
 %%% Marges bepaling
 \usepackage{biblatex}
