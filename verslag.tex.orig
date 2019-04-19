@@ -19,7 +19,7 @@ Parallel met de stijging van de incidentie is het dieet van de zuigeling verande
 
 \section{Methode}
     \subsection{Zoek \& selectie}
-\input{flowchart.tex}
+
     \subsection{Standaardisering}
 
     %\subsection{Kwaliteitsbeoordeling}
@@ -29,11 +29,19 @@ Parallel met de stijging van de incidentie is het dieet van de zuigeling verande
    \captionabove{Verzin nog iets}
    \begin{threeparttable}
    \resizebox{\textwidth}{!}{% 
+<<<<<<< HEAD
+    \begin{tabular}{ll*5clc}
+        \toprule
+        Artikel     & Nationaliteit & \multicolumn{2}{c}{$n_{tot}$} & OR         & Follow-up        & Borstvoeding & Onderzoeksvorm & $P$-waarde\\
+        \cmidrule(lr){3-4}
+                    &               & $n_{borst}$                   & $n_{fles}$ & 95\% BI-interval & (jaar)       & (maand)         & $< 0,05$ \\
+=======
    \begin{tabular}{ll*5clc}
         \toprule
         Artikel     & Nationaliteit & \multicolumn{2}{c}{$n_{tot}$} & OR         & Follow-up        & Borstvoeding & Onderzoeksvorm & $P$-waarde\\
         \cmidrule(lr){3-4}
                     &               & $n_{borst}$                   & $n_{fles}$ & 95\% BI-interval & (jaar)       & (maand)         &  & $< 0,05$ \\
+>>>>>>> 6a55a912c275cece0111976335fb45c33eb377ab
         \midrule
         Oddy1999    & Australië     &  &  & 1,25 (1,02-1,52) & 6             & 4                & Cohort studie & Waar \\
         Dekker2016  & Nederland     &  &  & 2,19 (1,29-3,71) & 6             & 2                & Cohort studie & Waar \\

@@ -9,7 +9,7 @@
 \usepackage[version=4]{mhchem}
 %%% Figuur programmeren
 \usepackage{tikz}
-\usetikzlibrary{positioning,calc,intersections}
+\usetikzlibrary{positioning,calc,intersections,matrix}
 \newcommand{\Receptor}[1]{%
 \begin{scope}[rotate around={#1:(0,0)}]
     \draw[%
@@ -46,6 +46,18 @@
         circle,
         ultra thick
         ] (#2) at (-0.20,0.20) {};
+}
+\newcommand{\flowblock}[4][]{%
+    \node[%
+        inner sep=5,
+        minimum width=4cm,
+        draw,
+        fill=blue!25,
+        align=center,
+        rounded corners,
+        #1
+                     ]
+                     (#2) {#3\\ ($n = #4$)};
 }
 \tikzset{>=latex}
 \usepackage{graphicx}

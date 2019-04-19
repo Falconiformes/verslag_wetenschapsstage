@@ -1,0 +1,24 @@
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[thick]
+        \matrix [row sep=2em,column sep=3em]
+        {
+            \flowblock{mesh_data}{Artikels in \textsc{MeSH}-database}{25} &\flowblock{all_data}{Artikels in \textsc{All}-database}{631} \\
+                                                                          &\flowblock[fill=red!25]{lol}{\parbox{4.2cm}{%
+                                                                                  \begin{itemize}   
+                                                                                      \item Geen mens
+                                                                                      \item review
+                                                                                      \item geen abstract
+                                                                                    \end{itemize}
+                                                                            }}{598}\\
+            \flowblock{cohort_clinical}{RCT \& Cohort studies}{26} & \\
+        };
+        \path[->]
+            (mesh_data) edge (cohort_clinical)
+            ($(mesh_data)!.5!(cohort_clinical)$) edge (lol)
+            ;
+        \draw (mesh_data) edge (all_data);
+    \end{tikzpicture}
+    \captionbelow{Zoekselectie}
+    \label{fig:flowchart_artcl_selectie}
+\end{figure}
