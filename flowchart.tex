@@ -7,18 +7,32 @@
                                                                           &\flowblock[fill=red!25]{lol}{\parbox{4.2cm}{%
                                                                                   \begin{itemize}   
                                                                                       \item Geen mens
-                                                                                      \item review
-                                                                                      \item geen abstract
+                                                                                      \item Review
+                                                                                      \item Geen abstract
                                                                                     \end{itemize}
                                                                             }}{598}\\
-            \flowblock{cohort_clinical}{RCT \& Cohort studies}{26} & \\
+            \flowblock{cohort_clinical}{RCT \& Cohort studies}{58} & \\
+                                                                   & \flowblock[fill=red!25]{artcl_unuse}{\parbox{4.2cm}{%
+                                                                        \begin{itemize}
+                                                                            \item Ongerelateerde titel
+                                                                            \item Ongerelateerde abstract
+                                                                        \end{itemize}
+                                                                    }
+                                                                   }
+                                                                   {48}\\
+            \flowblock{Bruikbare Artikelen}{Bruikbare artikelen}{10} & \\
+                            & \\
+            \flowblock{artcl_best}{Meest geschikte artikelen}{4} & \\
         };
         \path[->]
             (mesh_data) edge (cohort_clinical)
+            (cohort_clinical) edge (Bruikbare Artikelen)
+            (Bruikbare Artikelen) edge node[auto,text width=5cm] {Rekening houdend met confounding variabelen}(artcl_best)
             ($(mesh_data)!.5!(cohort_clinical)$) edge (lol)
+            ($(cohort_clinical)!.5!(Bruikbare Artikelen)$) edge (artcl_unuse)
             ;
         \draw (mesh_data) edge (all_data);
     \end{tikzpicture}
-    \captionbelow{Zoekselectie}
+    \captionbelow{Het filterproces omvatte de selectie op cohort studies \& RCT, overeenstemming van de inhoud van het artikel met onze vraagstelling en betrekking van confounding variabelen.}
     \label{fig:flowchart_artcl_selectie}
 \end{figure}
