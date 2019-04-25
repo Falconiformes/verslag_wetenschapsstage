@@ -7,6 +7,7 @@
 \usepackage{booktabs,array,multirow,tabularx} %% Tabellen libraries
 \usepackage{siunitx}
 \usepackage[version=4]{mhchem}
+\usepackage{amssymb}
 %%% Figuur programmeren
 \usepackage{tikz}
 \usetikzlibrary{positioning,calc,intersections,matrix}
@@ -59,6 +60,9 @@
                      ]
                      (#2) {#3\\ ($n = #4$)};
 }
+\newcommand{\good}{\cellcolor{green!25}\checkmark}
+\newcommand{\bad}{\cellcolor{red!25}\ding{55}}
+\usepackage{pifont}
 \tikzset{>=latex}
 \usepackage{graphicx}
 %%% Marges bepaling
